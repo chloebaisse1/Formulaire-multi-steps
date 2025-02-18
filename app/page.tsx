@@ -1,7 +1,11 @@
+import MultiFormSteps from "@/components/MultiFormSteps"
+
 export default function Home() {
   return (
-    <>
-      <h1>Hello</h1>
-    </>
+    <div className="min-h-screen bg-gray-100 py-12">
+      <div className="container mx-auto">
+        <MultiFormSteps />
+      </div>
+    </div>
   )
 }
