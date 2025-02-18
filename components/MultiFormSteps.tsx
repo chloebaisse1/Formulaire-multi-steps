@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
+import ProgressBar from "./ProgressBar"
 
 const steps = [
   { title: "Identité", description: "Vos informations personnelles" },
@@ -96,5 +97,9 @@ export default function MultiFormSteps() {
     setValue("technologies", selectedTech)
   }, [selectedTech, setValue])
 
-  return <div>MultiFormSteps</div>
+  return (
+    <div className="max-w-2xl mx-auto p-6">
+      <ProgressBar currentStep={step} steps={steps} />
+    </div>
+  )
 }
