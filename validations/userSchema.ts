@@ -15,5 +15,5 @@ export const userSchema = Yup.object().shape({
     .of(Yup.string().defined())
     .required("Les technologies sont obligatoires")
     .min(1, "Il faut au moins une technologie")
-    .transform((value) => value.filters(Boolean)),
+    .transform((value) => value.filter(Boolean)),
 })
